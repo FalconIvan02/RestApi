@@ -1,0 +1,32 @@
+### Recuperar todas las peliculas
+GET http://localhost:3000/movies
+
+### Recuperar uan pelicula por ID
+GET http://localhost:3000/movies/5ad1a235-0d9c-410a-b32b-220d91689a08
+
+### Recuperar todas las peliculas por un genero
+GET http://localhost:3000/movies?genre=drama
+
+### Crear una pelicula con POST
+POST http://localhost:3000/movies
+Content-Type: application/json
+
+{
+    "title": "The Lorax",
+    "year": 2012,
+    "director": "Chris Renaud",
+    "duration": 86,
+    "poster": "https://i.pinimg.com/736x/2a/14/4c/2a144c2178d89853a2768dabd5ae9a2c.jpg",
+    "genre": [
+        "Animation",
+        "Adventure",
+        "Comedy"
+    ]
+}
+### Actualizar peliculas
+PATCH http://localhost:3000/movies/dcdd0fad-a94c-4810-8acc-5f108d3b18c3
+Content-Type: application/json
+
+{
+    "year": 2012
+}
